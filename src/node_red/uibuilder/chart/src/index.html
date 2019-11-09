@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>Chartkick/VueJS Example - Node-RED UI Builder</title>
+    <meta name="description" content="Node-RED UI Builder - Chartkick/VueJS Example">
+
+    <link rel="icon" href="./images/node-blue.ico">
+
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
+
+    <link rel="stylesheet" href="./index.css" media="all">
+</head><body>
+    <div id="app">
+        <b-container id="app_container">
+
+            <h1>
+                Example of using <a href="https://chartkick.com/vue" target="_blank">Vue Chartkick</a>
+                with uibuilder, VueJS and bootstrap-vue
+            </h1>
+
+            <b-row>
+                <b-card cols="5" class="mr-1" header="Bar Chart" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                    <column-chart :data="[['Sun', 32], ['Mon', 46], ['Tue', 28]]"></column-chart>
+                </b-card>
+
+                <b-card  class="mr-1" header="Line Chart" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                    <line-chart :data="lineChartData"></line-chart>
+                </b-card>
+
+                <b-card  class="mr-1" header="Multi-Series Line Chart" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                    <line-chart :data="lineChartData2"></line-chart>
+                </b-card>
+
+                <b-card class="w-100 mt-3 mb-3" header="Area Chart" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                    <area-chart :data="areaChartData"></area-chart>
+                </b-card>
+
+                <b-card class="mr-1" header="Geo Chart (Google)" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                    <geo-chart width="800px" :data="[['United States', 44], ['Germany', 23], ['Brazil', 22]]"></geo-chart>
+                </b-card>
+
+                <b-card class="mr-1" header="Timeline (Google)" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                   <timeline width="800px" :data="[['Washington', '1789-04-29', '1797-03-03'], ['Adams', '1797-03-03', '1801-03-03']]"></timeline>
+                </b-card>
+
+            </b-row>
+
+        </b-container>
+    </div>
+
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script src="../uibuilder/vendor/vue/dist/vue.min.js"></script>
+    <script src="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.js"></script>
+
+    <!-- Loading from CDN, use uibuilder to install packages and change to vendor links -->
+    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script> <!-- Chart.js -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script> <!-- Google Charts -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>  HighCharts -->
+    <script src="https://unpkg.com/vue-chartkick@0.5.1"></script>
+
+    <script src="./uibuilderfe.min.js"></script> <!--    //prod version -->
+    <script src="./index.js"></script>
+
+</body></html>

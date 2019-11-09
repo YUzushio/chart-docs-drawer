@@ -2,7 +2,6 @@
   "name": "chart-docs-drawer",
   "version": "0.0.1",
   "description": "Web Server which support to draw chart docs like UML and others with web browser.",
-  
   "scripts": {
     "start": "node-red -p 80 -u ./src/node_red -v",
     "test": "test"

@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>vue-svg-gauge/VueJS Example - Node-RED UI Builder</title>
+    <meta name="description" content="Node-RED UI Builder - vue-svg-gauge/VueJS Example">
+
+    <link rel="icon" href="./images/node-blue.ico">
+
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
+
+    <link rel="stylesheet" href="./index.css" media="all">
+</head><body>
+    <div id="app">
+        <b-container id="app_container">
+
+            <h1>
+                Example of using <a href="https://github.com/hellocomet/vue-svg-gauge" target="_blank">vue-svg-gauge</a>
+                with uibuilder, VueJS and bootstrap-vue
+            </h1>
+
+            <b-row>
+                <b-card class="mr-1" header="SVG Gauge" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                    <vue-svg-gauge
+                        :start-angle="-110"
+                        :end-angle="110"
+                        :value="gValue"
+                        :separator-step="1"
+                        :min="0"
+                        :max="10"
+                        :gauge-color="[{ offset: 0, color: '#347AB0'}, { offset: 100, color: '#8CDFAD'}]"
+                        :scale-interval="0.1"
+                    >
+                        <div style="line-height: 12rem">{{gValue.toFixed(2)}}</div>
+                    </vue-svg-gauge>
+                </b-card>
+
+
+            </b-row>
+
+        </b-container>
+    </div>
+
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script src="../uibuilder/vendor/vue/dist/vue.min.js"></script>
+    <script src="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.js"></script>
+
+    <!-- Loading from CDN, use uibuilder to install packages and change to vendor links -->
+    <script src="https://unpkg.com/vue-svg-gauge@1.2.0/dist/vue-svg-gauge.min.js"></script>
+
+    <script src="./uibuilderfe.min.js"></script> <!--    //prod version -->
+    <script src="./index.js"></script>
+
+</body></html>

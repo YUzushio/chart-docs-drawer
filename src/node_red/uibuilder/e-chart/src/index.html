@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>eCharts/VueJS Example - Node-RED UI Builder</title>
+    <meta name="description" content="Node-RED UI Builder - eCharts/VueJS Example">
+
+    <link rel="icon" href="./images/node-blue.ico">
+
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
+
+    <link rel="stylesheet" href="./index.css" media="all">
+</head><body>
+    <div id="app">
+        <b-container id="app_container">
+
+            <h1>
+                Example of using <a href="https://github.com/ecomfe/vue-echarts?ref=madewithvuejs.com" target="_blank">Vue-ECharts</a>
+                with uibuilder, VueJS and bootstrap-vue
+            </h1>
+
+            <b-row>
+                <b-card header="Bar Chart" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
+                        <v-chart :options="ecOptionsBar"/>
+                </b-card>
+
+            </b-row>
+
+        </b-container>
+    </div>
+
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script src="../uibuilder/vendor/vue/dist/vue.min.js"></script>
+    <script src="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.js"></script>
+
+    <!-- Loading from CDN, use uibuilder to install packages and change to vendor links -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.1.0/dist/echarts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-echarts@4.0.2"></script>
+
+    <script src="./uibuilderfe.min.js"></script> <!--    //prod version -->
+    <script src="./index.js"></script>
+
+</body></html>
