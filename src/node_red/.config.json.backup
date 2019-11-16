@@ -392,6 +392,23 @@
      "file": "/usr/local/lib/node_modules/node-red/node_modules/node-red-node-tail/28-tail.js"
     }
    }
+  },
+  "node-red-contrib-uibuilder": {
+   "name": "node-red-contrib-uibuilder",
+   "version": "2.0.5",
+   "local": false,
+   "nodes": {
+    "uibuilder": {
+     "name": "uibuilder",
+     "types": [
+      "uibuilder"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-uibuilder",
+     "file": "/app/src/node_red/node_modules/node-red-contrib-uibuilder/nodes/uibuilder.js"
+    }
+   }
   }
  },
  "_credentialSecret": "ff502b7e9b6f4802c3fb798a9ef109ec9f64b897dc051970e6bc7a6b9591b888",

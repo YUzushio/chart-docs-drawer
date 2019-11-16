@@ -396,7 +396,7 @@
   "node-red-contrib-uibuilder": {
    "name": "node-red-contrib-uibuilder",
    "version": "2.0.5",
-   "local": false,
+   "local": true,
    "nodes": {
     "uibuilder": {
      "name": "uibuilder",
